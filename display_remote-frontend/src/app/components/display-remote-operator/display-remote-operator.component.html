@@ -1,0 +1,33 @@
+@if (safeUrl) {
+    <div class="remote-frame-viewport">
+        <iframe class="remote-frame" [src]="safeUrl" title="Remote display"></iframe>
+        @if (remoteLoadErrorKey) {
+            <div class="remote-error" role="alert">
+                <p class="remote-error-title">
+                    {{
+                        'operator-screen.universal-robots-display-remote-display-remote-operator.remote-error-title'
+                            | translate
+                    }}
+                </p>
+                <p class="remote-error-message">{{ remoteLoadErrorKey | translate }}</p>
+            </div>
+        } @else if (isCheckingRemoteUrl) {
+            <div class="remote-status" role="status" aria-live="polite">
+                <p class="remote-status-title">
+                    {{
+                        'operator-screen.universal-robots-display-remote-display-remote-operator.connecting-title'
+                            | translate
+                    }}
+                </p>
+                <p class="remote-status-message">
+                    {{
+                        'operator-screen.universal-robots-display-remote-display-remote-operator.connecting-message'
+                            | translate
+                    }}
+                </p>
+            </div>
+        }
+    </div>
+} @else {
+    <p class="hint">{{ emptyStateKey | translate }}</p>
+}

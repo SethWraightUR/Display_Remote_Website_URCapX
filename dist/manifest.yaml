@@ -1,0 +1,11 @@
+metadata:
+  vendorID: "universal_robots"
+  urcapID: "display_remote"
+  vendorName: "Universal Robots"
+  urcapName: "Display Remote"
+  version: 1.0.1
+artifacts:
+  webArchives:
+  - id: "display_remote-frontend"
+    folder: "display_remote-frontend"
+  

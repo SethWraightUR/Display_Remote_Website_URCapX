@@ -1,0 +1,50 @@
+<section class="sidebar-panel">
+    <ur-button type="cta" [disabled]="!safeUrl" (handleClick)="openRemoteView()">
+        {{ 'sidebar-items.universal-robots-display-remote-display-remote-sidebar.open-button' | translate }}
+    </ur-button>
+    @if (!safeUrl) {
+        <p class="hint">{{ hintKey | translate }}</p>
+    }
+</section>
+
+@if (isRemoteViewOpen && safeUrl) {
+    <div class="remote-overlay" role="dialog" aria-modal="true">
+        <header class="remote-overlay-header">
+            <ur-heading size="medium">
+                {{ 'sidebar-items.universal-robots-display-remote-display-remote-sidebar.overlay-title' | translate }}
+            </ur-heading>
+            <ur-button type="text" (handleClick)="closeRemoteView()">
+                {{ 'sidebar-items.universal-robots-display-remote-display-remote-sidebar.close-button' | translate }}
+            </ur-button>
+        </header>
+        <div class="remote-frame-viewport">
+            <iframe class="remote-frame" [src]="safeUrl" title="Remote display"></iframe>
+            @if (remoteLoadErrorKey) {
+                <div class="remote-error" role="alert">
+                    <p class="remote-overlay-title">
+                        {{
+                            'sidebar-items.universal-robots-display-remote-display-remote-sidebar.remote-error-title'
+                                | translate
+                        }}
+                    </p>
+                    <p class="remote-overlay-message">{{ remoteLoadErrorKey | translate }}</p>
+                </div>
+            } @else if (isCheckingRemoteUrl) {
+                <div class="remote-status" role="status" aria-live="polite">
+                    <p class="remote-overlay-title">
+                        {{
+                            'sidebar-items.universal-robots-display-remote-display-remote-sidebar.connecting-title'
+                                | translate
+                        }}
+                    </p>
+                    <p class="remote-overlay-message">
+                        {{
+                            'sidebar-items.universal-robots-display-remote-display-remote-sidebar.connecting-message'
+                                | translate
+                        }}
+                    </p>
+                </div>
+            }
+        </div>
+    </div>
+}

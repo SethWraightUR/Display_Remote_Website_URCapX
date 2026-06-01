@@ -1,0 +1,28 @@
+{
+  "applicationNodes": [ 
+    {
+      "translationPath": "assets/i18n/",
+      "behaviorURI": "display-remote-application.worker.js",
+      "presenterURI": "main.js",
+      "componentTagName": "universal-robots-display-remote-display-remote-application"
+    }
+    ],
+  "programNodes": [],
+  "smartSkills": [],
+  "sidebarItems": [ 
+    {
+      "name": "universal-robots-display-remote-display-remote-sidebar",
+      "iconURI": "assets/icons/display_remote.svg",
+      "presenterURI": "main.js",
+      "componentTagName": "universal-robots-display-remote-display-remote-sidebar",
+      "behaviorURI": "display-remote-sidebar.worker.js",
+      "translationPath": "assets/i18n/"
+    }],
+  "operatorScreens": [ 
+    {
+      "translationPath": "assets/i18n/",
+      "behaviorURI": "display-remote-operator.worker.js",
+      "presenterURI": "main.js",
+      "componentTagName": "universal-robots-display-remote-display-remote-operator"
+    }]
+}

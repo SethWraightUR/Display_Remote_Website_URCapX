@@ -1,0 +1,42 @@
+{
+    "application": {
+        "nodes": {
+            "universal-robots-display-remote-display-remote-application": {
+                "title": "Display Remote Application",
+                "supportiveText": "Configure the external website or IP address shown on the operator screen.",
+                "remote-url-label": "Remote URL or IP address",
+                "remote-url-placeholder": "192.168.0.100 or https://example.com/dashboard",
+                "url-invalid": "Enter an IP address (e.g. 192.168.0.100:8080) or a URL starting with http:// or https://"
+            }
+        }
+    },
+    "sidebar-items": {
+        "universal-robots-display-remote-display-remote-sidebar": {
+            "title": "Display Remote Sidebar",
+            "open-button": "Open remote view",
+            "close-button": "Close",
+            "overlay-title": "Remote view",
+            "configure-url": "Set a remote URL or IP address in the Display Remote Application settings.",
+            "invalid-url": "The configured address is invalid.",
+            "load-error": "Could not load Display Remote Application settings.",
+            "connecting-title": "Connecting to remote site",
+            "connecting-message": "Attempting to reach the configured remote site. This may take a few seconds.",
+            "remote-error-title": "Remote site unavailable",
+            "timeout-error": "The configured remote site did not respond in time. Check that the address is correct and the robot can reach it.",
+            "unreachable-error": "The configured remote site cannot be reached. Check that the site is online and the address is correct."
+        }
+    },
+    "operator-screen": {
+        "universal-robots-display-remote-display-remote-operator": {
+            "title": "Display Remote Operator",
+            "configure-url": "Set a remote URL or IP address in the Display Remote Application settings, then reopen the operator screen.",
+            "invalid-url": "The configured address is invalid. Use an IP address (e.g. 192.168.0.100) or a URL starting with http:// or https://.",
+            "load-error": "Could not load Display Remote Application settings.",
+            "connecting-title": "Connecting to remote site",
+            "connecting-message": "Attempting to reach the configured remote site. This may take a few seconds.",
+            "remote-error-title": "Remote site unavailable",
+            "timeout-error": "The configured remote site did not respond in time. Check that the address is correct and the robot can reach it.",
+            "unreachable-error": "The configured remote site cannot be reached. Check that the site is online and the address is correct."
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+  "bomFormat": "Universal Robots",
+  "components": {
+    "@universal-robots/contribution-api": "21.3.131",
+    "@universal-robots/designtokens": "21.3.85",
+    "@universal-robots/ros2-foxglove-interfaces": "4.1.7",
+    "@universal-robots/ros2-interfaces": "5.0.2",
+    "@universal-robots/ui-angular-components": "21.3.189",
+    "@universal-robots/ui-models": "21.3.85",
+    "@universal-robots/urcap-utils": "2.1.2",
+    "@universal-robots/utilities-units": "21.4.17"
+  }
+}

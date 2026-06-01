@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { registerSidebarBehavior } from \"@universal-robots/contribution-api\";\nconst behaviors = {\n  factory: () => {\n    return {\n      type: \"universal-robots-display-remote-display-remote-sidebar\",\n      version: \"1.0.1\"\n    };\n  }\n};\nregisterSidebarBehavior(behaviors);","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

@@ -1,0 +1,84 @@
+@import '../../../styles.scss';
+
+:host {
+    display: block;
+}
+
+.sidebar-panel {
+    padding: var(--spacing-05);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-04);
+}
+
+.hint {
+    margin: 0;
+    color: var(--color-font-secondary);
+    font: var(--font-body-small);
+}
+
+.remote-overlay {
+    position: fixed;
+    inset: var(--spacing-06);
+    z-index: var(--layer-modal, 1000);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-background-level-02);
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--shadow-06);
+    overflow: hidden;
+}
+
+.remote-overlay-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-04);
+    padding: var(--spacing-04) var(--spacing-05);
+    border-bottom: 1px solid var(--color-border-separator);
+    flex-shrink: 0;
+}
+
+.remote-frame-viewport {
+    flex: 1;
+    position: relative;
+    width: 100%;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.remote-frame {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+    min-height: 0;
+}
+
+.remote-error,
+.remote-status {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-03);
+    padding: var(--spacing-06);
+    box-sizing: border-box;
+    background-color: var(--color-background-level-02);
+    color: var(--color-font-primary);
+    text-align: center;
+}
+
+.remote-overlay-title {
+    margin: 0;
+    font: var(--font-heading-medium);
+}
+
+.remote-overlay-message {
+    max-width: 480px;
+    margin: 0;
+    color: var(--color-font-secondary);
+    font: var(--font-body-medium);
+}

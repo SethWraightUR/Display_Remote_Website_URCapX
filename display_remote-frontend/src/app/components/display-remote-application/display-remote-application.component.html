@@ -1,0 +1,14 @@
+@if (applicationNode) {
+    <div class="component">
+        <div class="section">
+            <ur-dialog-input
+                [type]="'text'"
+                [label]="'application.nodes.universal-robots-display-remote-display-remote-application.remote-url-label' | translate"
+                [placeholder]="'application.nodes.universal-robots-display-remote-display-remote-application.remote-url-placeholder' | translate"
+                [value]="applicationNode.remoteUrl"
+                [validators]="urlValidators"
+                (valueChanged)="onRemoteUrlChanged($event)"
+            ></ur-dialog-input>
+        </div>
+    </div>
+}
